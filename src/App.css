@@ -1,11 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,19 +5,377 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu-element a{color:#898989; text-decoration: none;}
+.menu-element a:hover{color:black; font-weight: bold;}
+.menu-element a:visited{text-decoration: none;}
+
+a{color:black; text-decoration: none; cursor: pointer;}
+a:visited{text-decoration: none; cursor: pointer;}
+
+
+h2{
+  margin:0;
+  margin-top:20px;
+  margin-bottom:20px;
+  font-size:21px;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-area{
+  position:fixed;
+  display:grid;
+  grid-template-rows: repeat(5,20%);
+  left:98%;
+  width:100%;
+  height: 100vh;
+}
+
+.menu-element{
+  width:20vh;
+  font-size:18px;
+  height:20vh;
+  transform-origin: left top;
+  -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+    text-align:center;
+}
+
+.el-width{
+  margin:0 auto;
+  padding:0;
+  width:70%;
+}
+
+.menu-element hr{
+  margin-top:20px;
+  border:none;
+  border-top:2px solid black;
+}
+
+
+#contents-area{
+  overflow:auto;
+  width: 95%;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+#contents-area::-webkit-scrollbar{
+  overflow:hidden;
+}
+
+.area{
+  scroll-snap-align: center;
+  position:relative;
+  width:100%;
+  height: 100vh;
+}
+
+
+.area:nth-child(1){
+  padding-left:0;
+}
+.intro{
+  position:absolute;
+  margin-top:0px;
+  margin-bottom:0;
+  font-size:72px;
+  text-align:center;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.logo{
+  position:relative;
+  padding-top:50px;
+  margin-left:200px;
+  font-size:62px;
+}
+
+.logo h1{
+  margin:0;
+}
+.logo h2{
+  margin:0;
+  font-size:40px;
+  color:#87CEEB;
+}
+
+/***** experience ****/
+.experience-info{
+  width:100%;
+  margin:0 auto;
+  padding:0;
+  margin-top:50px;
+  text-align: center;;
+}
+
+.experience-info h2{
+  font-size:32px;
+  color:gray;
+  font-weight: bold;
+}
+.experience-info hr{
+  width:100px;
+  border:none;
+  border-top:2px solid #e2e2e2;
+}
+
+.experience-el{
+  margin:0 auto;
+  padding:0;
+  margin-top:30px;
+  display: grid;
+  width:70%;
+  grid-template-columns: repeat(5, 20%);
+}
+.experience-el img{
+  height:100px;
+  margin:0 auto;
+  padding:0;
+}
+
+/*******project area **********/
+
+.contents-wrapper{
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-wrapper{
+  position: relative;
+}
+
+.project-info{
+  display:grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 170px 300px;
+  position:relative;
+  margin-left:150px;
+  margin-top:30px;
+}
+
+.pj-cm hr{
+  margin-top:30px;
+  border:none;
+  border-top: 1px solid #e2e2e2;
+  width:100%;
+}
+
+.pj-cm-first{
+  grid-column: 1/2;
+  grid-row:1/2;
+}
+
+.pj-cm-second{
+  grid-column: 1/2;
+  grid-row:2/3;;
+}
+.pj-cm{
+  margin-top:20px;
+}
+
+.pj-cm h3,p{
+  margin:0;
+}
+
+.project-img-area{
+  grid-column: 2/3;
+  grid-row:1/3;
+}
+.project-img-area img{
+  width:80%;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  color:black;
+}
+.swiper-pagination-bullet-active{
+  background:black;
+}
+
+.project-detail{
+  position:relative;
+  display: grid;
+  align-items: center;
+  height: 50vh;
+  grid-template-columns: 30% 70%;
+  grid-gap: 3%;
+  margin-left:150px;
+}
+
+.dv-el{
+  grid-column: 1/2;
+}
+.dv-el h2{
+  text-align: center;
+  color:gray;
+  font-weight: bold;
+  margin: 0;
+  font-size:24px;
+}
+.dv-el hr{
+  width:60%;
+  border:none;
+  border-top: 2px solid #e2e2e2;
+  margin-top:30px;
+  margin-bottom:30px;
+
+}
+.el-list{
+  position:relative;
+  margin:0 auto;
+  padding:0;
+}
+.el-list img{
+  height: 60px;
+  float:left;
+  margin-left:30px;
+  margin-top:10px;
+}
+
+.dv-detail{
+  position:relative;
+  width:85%;
+  grid-column: 2/3;
+  height: 60vh;
+  border: 1px solid #e2e2e2;
+  z-index: -1;
+  background-color:white;
+  text-align: center;
+}
+
+.dv-detail h3{
+  font-weight: bold;
+  color:gray;
+  font-size:15px;
+}
+.dv-detail img{
+  width: 80%;
+  height: 45vh;
+}
+.dv-detail textarea{
+  resize: none;
+  width:90%;
+}
+.dv-detail .info-area{
+  margin-top:20px;
+}
+.dv-detail .info-area p{
+  font-size:13px;
+}
+
+
+/********* activity *********/
+.activity-wrapper{
+  position:relative;
+  margin-top:30px;
+  margin-left:100px;
+  width:100%;
+  height: 70vh;
+  display:flex;
+  justify-content: center;
+}
+
+.activity-img-area{
+  position:relative;
+  width:50%;
+  height: 50vh;
+}
+
+.activity-img-area img{
+  width:60%;
+  height:60%;
+  object-fit: cover;
+  position:absolute;
+}
+
+.activity-img-area img:nth-child(1){
+  top:15%;
+  transform:rotate(-20deg);
+  z-index:1;
+}
+.activity-img-area img:nth-child(2){
+  left:25%;
+  top:55%;
+  transform:rotate(20deg);
+  z-index:2
+}
+
+.activity-info-area{
+  width:35%;
+  position:relative;
+  height: 50vh;
+}
+
+.info-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:0 auto;
+  height:60vh;
+}
+
+.info-form h2{
+  color:gray;
+  font-size:28px;
+  margin:0;
+}
+
+.info-form hr{
+  width:50%;
+  border:none;
+  border-top:1px solid #e2e2e2;
+  margin-left:0;
+  margin-top:20px;
+  margin-bottom:20px;
+}
+
+.info-form text{
+  font-size:15px;
+  color:black;
+  white-space: pre-wrap;
+}
+
+/********my info **********/
+
+.myinfo-wrapper{
+  position:relative;
+  margin-top:30px;
+  margin-left:100px;
+  width:100%;
+  height: 70vh;
+  display:flex;
+  justify-content: center;
+}
+
+.myinfo-info{
+width:40%;
+margin-left:50px;
+margin-top:30px;
+}
+
+.myinfo-info .typing-effect__typewriter h4{
+  font-family: "BMHANNAPro";
+  font-weight: normal;
+  font-size:21px;
+}
+
+.myinfo-info p{
+  margin-bottom:20px;
+}
+.myinfo-info h3{
+  font-size:24px;
+}
+
+.myinfo-info img{
+  width:40px;
+}
+.moreinfo-area img{
+  margin-right:30px;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +386,9 @@
     transform: rotate(360deg);
   }
 }
+@font-face {
+  font-family: 'BMHANNAPro';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  }
