@@ -374,6 +374,9 @@ h2{
 width:40%;
 margin-left:50px;
 margin-top:30px;
+display:flex;
+flex-direction: column;
+justify-content: center;
 }
 
 .myinfo-info .typing-effect__typewriter h4{
