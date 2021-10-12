@@ -1,5 +1,6 @@
 import React from 'react';
 import ActivityEl from './Activity/ActivityEl';
+import Fade from 'react-reveal/Fade';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination } from "swiper";
@@ -10,6 +11,16 @@ import "swiper/components/pagination/pagination.scss";
 function Activity({ name }) {
 
     const imglist = {
+        capstone: [
+            {
+                title: "캡스톤 디자인 대회",
+                imgsrc: "img/activity/capstone/capstone1.jpg",
+                alt: "capstone1",
+                imgsrc2: "img/activity/capstone/capstone2.jpg",
+                alt2: "capstone2",
+                text: `저는 사람들과 만나는 것을 즐기는 성격입니다.\n그래서 대학교 입학 직후 학생회에 들어갔습니다.\n학생회에서 총대역활을 하면서 대학에 적응하지 못한\n1학년 학생들을 적응할 수 있게 도와주고\n많은 대,내외 활동을 해왔습니다.\n\n총대를 함으로써 친화력과 리더쉽을 키우며 더욱 더\n발전한 저를 만들 수 있었습니다.`
+            }
+        ],
         student: [
             {
                 title: "학생회 총대",
@@ -42,9 +53,11 @@ function Activity({ name }) {
     }
     return (
         <section id="activity-area" className="area">
-            <div className="logo">
-                <h1>{name.menuname}</h1>
-            </div>
+            <Fade left>
+                <div className="logo">
+                    <h1>{name.menuname}</h1>
+                </div>
+            </Fade>
             <div className="contents-wrapper">
                 <Swiper
                     className="activity"
@@ -54,6 +67,9 @@ function Activity({ name }) {
                     pagination={{ clickable: true }}
                     loop={true}
                 >
+                    <SwiperSlide>
+                        <ActivityEl el={imglist.capstone} />
+                    </SwiperSlide>
                     <SwiperSlide>
                         <ActivityEl el={imglist.student} />
                     </SwiperSlide>

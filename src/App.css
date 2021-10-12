@@ -32,7 +32,7 @@ h2{
 .menu-element{
   width:20vh;
   font-size:18px;
-  height:20vh;
+  height:50px;
   transform-origin: left top;
   -ms-transform: rotate(90deg);
     -webkit-transform: rotate(90deg); 
@@ -44,6 +44,21 @@ h2{
   margin:0 auto;
   padding:0;
   width:70%;
+}
+
+.el-width a::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;
+  height:4px;
+  background:black;
+  transition:all .3s ease-out;
+}
+.el-width a:hover::after{
+  width:80px;
 }
 
 .menu-element hr{
@@ -320,13 +335,13 @@ h2{
 }
 
 .info-form h2{
-  color:gray;
+  color:black;
   font-size:28px;
   margin:0;
 }
 
 .info-form hr{
-  width:50%;
+  width:75%;
   border:none;
   border-top:1px solid #e2e2e2;
   margin-left:0;

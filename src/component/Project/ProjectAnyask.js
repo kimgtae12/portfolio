@@ -27,7 +27,7 @@ function PjAnyask(props) {
                         </div>
                         <div className="pj-cm">
                             <h3>Git Hub</h3>
-                            <a href={"#!"} onClick={() => window.open(props.info[0].gitlink, '_blank')} >{props.info[0].gitlink}</a>
+                            <a href={"#!"} onClick={() => window.open(props.info[0].gitlink, '_blank')}>{props.info[0].gitlink}</a>
                         </div>
                         <div className="pj-cm">
                             <h3>To Site</h3>
