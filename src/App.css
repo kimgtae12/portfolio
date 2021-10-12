@@ -246,6 +246,7 @@ h2{
   position:relative;
   margin:0 auto;
   padding:0;
+  width:350px;
 }
 .el-list img{
   height: 60px;
